@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+#headshot{
+    width: 30%;    
+}
+
+img{
+    width: 100%;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+}
+
+nav{
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-logo{
+    max-width: 100px;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link a{
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #3b3937;
+    text-decoration: none;
+}
+
+.link a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color:#0000ff;
+    transition: all 0.3s ease;
+}
+
+.link a:hover::after{
+    width: 70%;
+}
+
+.btn{
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    color: #3b3937;
+    background-color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;   
+}
+
+.btn:hover{
+    background-color: #ffffff64
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.blur{
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #0000ff;
+    opacity: 0.5;
+    z-index: -100;
+}
+
+header{
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items:center;
+    gap: 2rem;   
+}
+
+header .content h1{
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+header .content h1 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #0000ff;
+}
+
+header .content p{
+    margin-bottom: 2rem;
+}
+
+header .image{
+    position: relative;
+}
+
+header .image::before{
+    content: "*";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40rem;
+    font-weight: 400;
+    line-height: 20rem;
+    color: #0000ff;
+    opacity: 0.2;
+    z-index: -100;
+}
+
+header .image img{
+    max-width: 600px;
+    margin: auto;
+}
+
+section .header{
+    margin-bottom: 1rem;
+    color: #000000;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+.projects, .skills{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.projects .card, .skills .card{
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.skills .card{
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.projects .card:hover, .skills .card:hover{
+    background-color: #ffffff;
+    border-color: #0000ff;
+}
+
+.projects .card span{
+    display: inline-block;
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    border-radius: 5px;
+}
+
+.projects .card h4{
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.skills img{
+    max-width: 100px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.copyright{
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    color: #000000;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+@media (width < 900px){
+    .nav-links{
+        display: none;
+    }
+    header{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header .image{
+        grid-area: 1/1/2/2
+    }
+    .projects{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (width < 600px){
+    header .image::before{
+        display: none;
+    }
+
+    .projects{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
