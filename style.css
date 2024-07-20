@@ -168,14 +168,6 @@ section .header{
     transition: all 0.3s ease;
 }
 
-.skills .card{
-    background-color: #f5f5f5;
-    padding: 1rem;
-    border: 2px solid transparent;
-    border-radius: 15px;
-    transition: all 0.3s ease;
-}
-
 .projects .card:hover, .skills .card:hover{
     background-color: #ffffff;
     border-color: #0000ff;
