@@ -8,8 +8,9 @@
     box-sizing: border-box;
 }
 
-#headshot{
-    width: 30%;    
+#headshot > img{
+    width: 40%;    
+    border-radius: 50%;
 }
 
 img{
@@ -127,12 +128,10 @@ header .image{
 }
 
 header .image::before{
-    content: "*";
+    content: "林";
     position: absolute;
-    top: 0;
-    left: 50%;
     transform: translateX(-50%);
-    font-size: 40rem;
+    font-size: 30rem;
     font-weight: 400;
     line-height: 20rem;
     color: #0000ff;
